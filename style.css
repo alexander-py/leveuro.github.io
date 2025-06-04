@@ -1,0 +1,290 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('images/wallpaper.jpg'); /* Your wallpaper path */
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    display: flex;
+    flex-direction: column; /* Allow toggle to be above container */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* For positioning language toggle */
+}
+
+.language-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+.lang-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.lang-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.lang-button.active {
+    background-color: #fff;
+    color: #764ba2; /* Match one of the gradient colors */
+    border-color: #fff;
+}
+
+
+.converter-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 60px; /* Add margin to avoid overlap with fixed toggle */
+}
+
+header h1 {
+    font-size: 3.5em; /* Increased font size for more impact */
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+    /* Added text shadow for a stunning effect */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), /* White glow */
+                 0 0 25px rgba(255, 255, 255, 0.5), /* Faint white glow */
+                 0 5px 10px rgba(0, 0, 0, 0.3); /* Subtle dark shadow for depth */
+    letter-spacing: 2px; /* Add some spacing for better readability */
+    line-height: 1.2; /* Adjust line height if needed */
+}
+
+header .subtitle {
+    font-size: 1.2em; /* Slightly increased subtitle size */
+    margin-bottom: 35px; /* More space below subtitle */
+    color: rgba(255, 255, 255, 0.9); /* Slightly brighter subtitle */
+    font-weight: 300;
+}
+
+.rate-display {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 1em;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.rate-display strong {
+    font-weight: 600;
+    color: #fff;
+}
+
+.conversion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.input-group, .output-group {
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.flag-icon {
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.flag-icon svg {
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.arrow-icon {
+    transform: rotate(90deg);
+}
+
+.arrow-icon svg {
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+/* Examples Section */
+.examples-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.examples-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#examples-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#examples-list li {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.85);
+    min-width: 150px;
+    text-align: center;
+}
+
+.note {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 30px;
+}
+
+.news-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Desktop layout adjustments */
+@media (min-width: 550px) {
+    .conversion-form {
+        flex-direction: row;
+        align-items: center;
+    }
+    .input-group, .output-group {
+        flex: 1;
+    }
+    .arrow-icon {
+        transform: rotate(0deg);
+        margin: 0 10px;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 640px) { /* Adjust for toggle position on smaller screens */
+    .language-toggle-container {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+    .lang-button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+    .converter-container {
+        margin-top: 70px; /* Ensure enough space below toggle */
+        padding: 25px;
+    }
+    header h1 {
+        font-size: 2.8em; /* Adjusted for smaller screens */
+        letter-spacing: 1px;
+    }
+    header .subtitle {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #examples-list li {
+        width: 100%;
+        min-width: 0;
+    }
+    header h1 {
+        font-size: 2.4em; /* Further adjusted for very small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .converter-container {
+        padding: 20px;
+    }
+}
