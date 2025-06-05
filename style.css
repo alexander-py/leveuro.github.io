@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('images/wallpaper.jpg'); /* Your wallpaper path */
+    background-image: url('images/wallpaper.webp'); /* Your wallpaper path */
     background-size: cover; /* Ensures the image covers the entire body */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Keeps the background fixed when scrolling */
