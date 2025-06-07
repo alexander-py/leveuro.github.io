@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate-key="pageTitle">BGN to EUR Converter | Official Rate</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate-key="pageTitle">BGN to EUR Converter | Official Rate</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://leveuro.eu" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BGN to EUR Converter | Official Rate" />
+  <meta property="og:description" content="Convert Bulgarian Lev to Euro at the official fixed rate." />
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://leveuro.eu" />
+  <meta property="twitter:title" content="BGN to EUR Converter | Official Rate" />
+  <meta property="twitter:description" content="Convert Bulgarian Lev to Euro at the official fixed rate." />
 </head>
 <body>
-    <div class="language-toggle-container">
-        <button id="lang-en" class="lang-button active" data-lang="en">EN</button>
-        <button id="lang-bg" class="lang-button" data-lang="bg">BG</button>
-    </div>
+  <div class="language-toggle-container">
+    <button id="lang-en" class="lang-button active" data-lang="en">EN</button>
+    <button id="lang-bg" class="lang-button" data-lang="bg">BG</button>
+  </div>
 
-    <div class="converter-container">
-        <header>
-            <h1 data-translate-key="mainHeading">BGN to EUR Converter</h1>
-            <p class="subtitle" data-translate-key="subHeading">Convert Bulgarian Lev to Euro at the official fixed rate.</p>
-        </header>
-        <main>
-            <div class="rate-display">
-                <span data-translate-key="officialRateText">Official Exchange Rate:</span> <strong>1 EUR = 1.95583 BGN</strong>
-            </div>
-            <div class="conversion-form">
-                <div class="input-group">
-                    <label for="bgn-amount">
-                        <span class="flag-icon">
-                            <svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" width="24" height="15"><path fill="#fff" d="M0 0h800v480H0z"/><path fill="#00966E" d="M0 160h800v320H0z"/><path fill="#D62612" d="M0 320h800v160H0z"/></svg>
-                        </span>
-                        <span data-translate-key="bgnLabel">BGN Amount (лв):</span>
-                    </label>
-                    <input type="number" id="bgn-amount" data-translate-key-placeholder="bgnPlaceholder" placeholder="e.g., 100" step="any" autofocus>
-                </div>
-                <div class="arrow-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48px" height="48px"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-                </div>
-                <div class="output-group">
-                    <label for="eur-amount">
-                        <span class="flag-icon">
-                             <img src="images/Flag_of_Europe.svg" alt="Flag of European Union" width="28" height="19">
-                        </span>
-                        <span data-translate-key="eurLabel">EUR Amount (€):</span>
-                    </label>
-                    <input type="number" id="eur-amount" data-translate-key-placeholder="eurPlaceholder" placeholder="Result in EUR" step="any">
-                </div>
-            </div>
+  <div class="converter-container">
+    <header>
+      <h1 data-translate-key="mainHeading">BGN to EUR Converter</h1>
+      <p class="subtitle" data-translate-key="subHeading">Convert Bulgarian Lev to Euro at the official fixed rate.</p>
+    </header>
+    <main>
+      <div class="rate-display">
+        <span data-translate-key="officialRateText">Official Exchange Rate:</span>
+        <strong>1 EUR = 1.95583 BGN</strong>
+      </div>
 
-            <div class="examples-section">
-                <h3 data-translate-key="examplesHeading">Quick examples:</h3>
-                <ul id="examples-list">
-                    </ul>
-            </div>
+      <div class="conversion-form">
+        <div class="input-group">
+          <label for="bgn-amount">
+            <span class="flag-icon">
+              <svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" width="24" height="15">
+                <path fill="#fff" d="M0 0h800v480H0z" />
+                <path fill="#00966E" d="M0 160h800v320H0z" />
+                <path fill="#D62612" d="M0 320h800v160H0z" />
+              </svg>
+            </span>
+            <span data-translate-key="bgnLabel">BGN Amount (лв):</span>
+          </label>
+          <input type="number" id="bgn-amount" data-translate-key-placeholder="bgnPlaceholder" placeholder="e.g., 100" step="any" autofocus />
+        </div>
 
-            <p class="note" data-translate-key="noteText">Results are updated automatically.</p>
-        </main>
-        <footer>
-            <div class="news-section">
-                <p data-translate-key="newsText"></p>
-            </div>
-            <p>&copy; <span id="currentYear"></span> <span data-translate-key="footerRights">QuickConverter. All Rights Reserved.</span></p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+        <div class="arrow-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48px" height="48px">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+          </svg>
+        </div>
+
+        <div class="output-group">
+          <label for="eur-amount">
+            <span class="flag-icon">
+              <img src="images/Flag_of_Europe.svg" alt="Flag of European Union" width="28" height="19" />
+            </span>
+            <span data-translate-key="eurLabel">EUR Amount (€):</span>
+          </label>
+          <input type="number" id="eur-amount" data-translate-key-placeholder="eurPlaceholder" placeholder="Result in EUR" step="any" />
+        </div>
+      </div>
+
+      <div class="examples-section">
+        <h3 data-translate-key="examplesHeading">Quick examples:</h3>
+        <ul id="examples-list"></ul>
+      </div>
+
+      <p class="note" data-translate-key="noteText">Results are updated automatically.</p>
+    </main>
+
+    <footer>
+      <div class="news-section">
+        <p data-translate-key="newsText"></p>
+      </div>
+
+      <div class="social-share-section">
+        <h4 data-translate-key="shareHeading">Share this converter:</h4>
+        <div class="social-links">
+          <a href="#" id="share-facebook" class="social-link" target="_blank" aria-label="Share on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 5.06 3.67 9.25 8.44 9.94v-7.03H7.9v-2.91h2.54V9.83c0-2.52 1.5-3.92 3.8-3.92 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.91h-2.33v7.03c4.77-.69 8.44-4.88 8.44-9.94C22 6.53 17.5 2.04 12 2.04z"/>
+            </svg>
+          </a>
+          <a href="#" id="share-x" class="social-link" target="_blank" aria-label="Share on X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p>&copy; <span id="currentYear"></span> <span data-translate-key="footerRights">Alexander Stefanov. All Rights Reserved.</span></p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
