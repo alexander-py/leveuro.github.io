@@ -230,6 +230,45 @@ footer {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Social Share Section */
+.social-share-section {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-share-section h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-link {
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-link svg {
+    width: 28px;
+    height: 28px;
+}
+
+
 /* Desktop layout adjustments */
 @media (min-width: 550px) {
     .conversion-form {
